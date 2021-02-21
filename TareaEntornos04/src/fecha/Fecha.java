@@ -55,6 +55,13 @@ public class Fecha {
 				diasMes = 28;
 			break;
 		}
+		return bisiesto(diasMes);
+	}
+	/**
+	 * @param diasMes
+	 * @return
+	 */
+	public boolean bisiesto(int diasMes) {
 		if (dia > diasMes)
 			return false;
 		else
