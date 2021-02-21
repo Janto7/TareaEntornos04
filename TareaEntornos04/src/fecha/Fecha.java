@@ -18,7 +18,14 @@ public class Fecha {
 		this.ano = ano;
 	}
 //	Determinamos si el dia o mes introducidos son validos.
+	/**
+	 * @deprecated Use {@link #validarFecha()} instead
+	 */
 	public boolean validar() {
+		return validarFecha();
+	}
+	//	Determinamos si el dia o mes introducidos son validos.
+	public boolean validarFecha() {
 		if (dia < 1 || dia > 31)
 			return false;
 		if (mes < 1 || mes > 12)
