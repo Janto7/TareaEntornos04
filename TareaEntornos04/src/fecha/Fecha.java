@@ -8,24 +8,24 @@ package fecha;
  *
  */
 public class Fecha {
-	public int d;
-	public int m;
-	public int a;
+	public int dia;
+	public int mes;
+	public int ano;
 
 	public Fecha(int d, int m, int a) {
-		this.d = d;
-		this.m = m;
-		this.a = a;
+		this.dia = d;
+		this.mes = m;
+		this.ano = a;
 	}
 
 	public boolean valida() {
-		if (d < 1 || d > 31)
+		if (dia < 1 || dia > 31)
 			return false;
-		if (m < 1 || m > 12)
+		if (mes < 1 || mes > 12)
 			return false;
 // Determinamos la cantidad de días del mes:
 		int diasMes = 0;
-		switch (m) {
+		switch (mes) {
 		case 1:
 		case 3:
 		case 5:
@@ -42,13 +42,13 @@ public class Fecha {
 			diasMes = 30;
 			break;
 		case 2: // Verificamos si el año es bisiesto
-			if ((a % 400 == 0) || ((a % 4 == 0) && (a % 100 != 0)))
+			if ((ano % 400 == 0) || ((ano % 4 == 0) && (ano % 100 != 0)))
 				diasMes = 29;
 			else
 				diasMes = 28;
 			break;
 		}
-		if (d > diasMes)
+		if (dia > diasMes)
 			return false;
 		else
 			return true;
