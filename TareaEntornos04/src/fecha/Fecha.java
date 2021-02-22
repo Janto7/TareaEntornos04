@@ -7,24 +7,25 @@ package fecha;
  * @author José Antonio Del Rey Martínez
  *
  */
+//asignamos variables para la clase fecha.
 public class Fecha {
 	public int dia;
 	public int mes;
 	public int ano;
+// constructor clase fecha.
 
 	public Fecha(int dia, int mes, int ano) {
 		this.dia = dia;
 		this.mes = mes;
 		this.ano = ano;
 	}
-//	Determinamos si el dia o mes introducidos son validos.
-	/**
-	 * @deprecated Use {@link #validarFecha()} instead
+
+	 /* @deprecated Use {@link #validarFecha()} instead
 	 */
 	public boolean validar() {
 		return validarFecha();
 	}
-	//	Determinamos si el dia o mes introducidos son validos.
+//	Determinamos si el dia o mes introducidos son validos.
 	public boolean validarFecha() {
 		if (dia < 1 || dia > 31)
 			return false;
